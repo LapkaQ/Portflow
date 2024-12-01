@@ -43,7 +43,7 @@ function App() {
 
   return (
     <div>
-      <p className="read-the-docs">pf</p>
+      <p className="read-the-docs">PorfFlow💗</p>
       {!user ? (
         <>
           <button onClick={handleLogin}>Zaloguj się</button>
