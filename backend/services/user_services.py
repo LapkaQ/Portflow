@@ -7,7 +7,7 @@ def get_user_data(user):
     return {
         "name": user.get('name'),
         "email": user.get('email'),
-        "avatar_rul": user.get('avatar_url'),
+        "avatar_url": user.get('avatar_url'),
         "user_id": user.get('id')
     }
 

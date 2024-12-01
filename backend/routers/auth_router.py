@@ -48,7 +48,7 @@ async def auth(request: Request, db: Session = Depends(get_db)):
             "user": request.session['user'],
             "redirect": settings.FRONTEND_APP_URL
         })
-        response.set_cookie("user", request.session["user"]["id"], httponly=True, secure=False, path="/")
+        response.set_cookie("user", request.session["user"]["id"], httponly=True, secure=True, samesite="none", path="/")
 
         return response
 

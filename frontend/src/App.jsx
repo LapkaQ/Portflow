@@ -47,7 +47,6 @@ function App() {
       {!user ? (
         <>
           <button onClick={handleLogin}>Zaloguj się</button>
-          <button onClick={handleLogout}>Wyloguj się</button>
         </>
       ) : (
         <div>

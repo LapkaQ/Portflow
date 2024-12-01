@@ -6,8 +6,8 @@ from services.auth_services import oauth
 from config import settings
 
 app = FastAPI()
-
-app.add_middleware(SessionMiddleware, secret_key=settings.SECRET_KEY)
+print("dupa")
+app.add_middleware(SessionMiddleware, secret_key=settings.SECRET_KEY, same_site="none", https_only=True)
 app.include_router(auth_router.router)
 app.include_router(user_router.router)
 
