@@ -50,5 +50,5 @@ async def auth(request: Request, db: Session = Depends(get_db)):
         })
         response.set_cookie("user", request.session["user"]["id"], httponly=True, secure=True, samesite="none", path="/")
 
-        return response
+        return RedirectResponse(url=settings.FRONTEND_APP_URL, status_code=303)
 
